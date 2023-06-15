@@ -1,0 +1,630 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  padding: 0;
+  margin: 0;
+  line-height: 1.5;
+
+  background-color: black;
+}
+
+/*-----------------
+    NAVBAR
+-------------------*/
+
+.show {
+  display: flex !important;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5%;
+}
+
+
+nav ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin:0;
+  align-items: center;
+  white-space: nowrap;
+}
+
+nav ul li > a {
+  display: block;
+  position: relative;
+  padding: 20px 10px 10px 10px;
+  text-decoration: none ;
+  color: white;
+}
+
+nav ul li .link::before {
+  content:"";
+  position: absolute;
+  display: block;
+  left:0;
+  bottom:0;
+  width: 90%;
+  height: 2px;
+  transform: scaleX(0);
+  -webkit-transform: scaleX(0);
+  -moz-transform: scaleX(0);
+  -ms-transform: scaleX(0);
+  -o-transform: scaleX(0);
+  transition: transform 0.3s ease;
+  -webkit-transition: transform 0.3s ease;
+  -moz-transition: transform 0.3s ease;
+  -ms-transition: transform 0.3s ease;
+  -o-transition: transform 0.3s ease;
+
+  background-color: white;
+}
+
+nav ul li .link:hover::before {
+  transform: scaleX(1)  ;
+  -webkit-transform: scaleX(1)  ;
+  -moz-transform: scaleX(1)  ;
+  -ms-transform: scaleX(1)  ;
+  -o-transform: scaleX(1)  ;
+}
+
+nav .menu{
+  position: absolute;
+  display: none;
+  flex-direction: column;
+  min-width: 200px;
+  z-index: 200;
+  background-color: white;
+}
+
+nav .menu a {
+  padding: 10px;
+  color: black;
+  text-decoration: none;
+}
+
+nav .menu a:hover {
+  background-color: black;
+  color:white
+}
+
+nav .more {
+  display: none;
+}
+
+nav .mobile {
+  display: none;
+  width: 100%;
+}
+
+nav .mobile .header {
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+nav .mobile .header a {
+  color: white;
+  text-decoration: none;
+  display: inline-flex;
+}
+
+nav .mobile .header a > span {
+  color:#fff;
+}
+
+.material-symbols-outlined{
+  color:#fff;
+}
+
+nav .mobile .header #bmenu {
+  border:none;
+  background-color: transparent;
+  cursor:pointer;
+  color:white
+}
+nav .mobile .links {
+  display: none;
+  flex-direction: column;
+  position: relative;
+  z-index:200;
+  background-color: black;
+}
+
+nav .mobile .links a {
+  font-size: 18px;
+  display: block;
+  padding: 10px 20px;
+  color:white;
+  text-decoration: none;
+}
+
+
+nav .mobile .links a:hover {
+  background-color: white;
+  color:black
+}
+
+/*-----------------
+    NAVBAR
+-------------------*/
+
+header {
+  background-image: url("../images/halo-infinite-cover-darkmode.jpg");
+  background-size: cover;
+  background-repeat: no-repeat ;
+  background-position: center;
+  height: 100vh;
+}
+
+/*-----------------
+    BANNER
+-------------------*/
+h2{
+  font-size:3.3rem;
+  position: relative;
+  display: inline-block;
+  margin:0;
+  padding: 0;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+
+h2::before {
+  content:"";
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  bottom:-30px;
+  left: 0;
+  transform: scale(0.4) skewY(-20deg) rotate(20deg);
+  background-color: yellowgreen;
+  -webkit-transform: scale(0.4) skewY(-20deg) rotate(20deg);
+  -moz-transform: scale(0.4) skewY(-20deg) rotate(20deg);
+  -ms-transform: scale(0.4) skewY(-20deg) rotate(20deg);
+  -o-transform: scale(0.4) skewY(-20deg) rotate(20deg);
+}
+
+#banner p{
+  padding: 10px 40px;
+}
+#banner {
+  font-size:1.8em;
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+  text-align: center;
+  position: absolute;
+  width:500px;
+  padding:40px;
+  z-index:100;
+  top:150px;
+  right: 100px;
+}
+
+.green-button {
+  text-transform: uppercase;
+  border:0;
+  display: inline-flex;
+  align-items: center;
+  font-size: 14px;
+  padding: 10px 40px;
+  background-color: #8cd320;
+  color:black;
+  font-weight: bolder;
+  text-decoration: none;
+  cursor: pointer;
+  transform: skew(20deg) ;
+  -webkit-transform: skew(20deg) ;
+  -moz-transform: skew(20deg) ;
+  -ms-transform: skew(20deg) ;
+  -o-transform: skew(20deg) ;
+  transition: transform 0.3s ease;
+  -webkit-transition: transform 0.3s ease;
+  -moz-transition: transform 0.3s ease;
+  -ms-transition: transform 0.3s ease;
+  -o-transition: transform 0.3s ease;
+}
+
+.green-button > * {
+  transform: skew(-20deg);
+  -webkit-transform: skew(-20deg);
+  -moz-transform: skew(-20deg);
+  -ms-transform: skew(-20deg);
+  -o-transform: skew(-20deg);
+}
+
+.green-button:hover {
+  background-color: greenyellow;
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+}
+
+.green-button:hover > * {
+  transform: skew(0deg);
+  -webkit-transform: skew(0deg);
+  -moz-transform: skew(0deg);
+  -ms-transform: skew(0deg);
+  -o-transform: skew(0deg);
+}
+
+/* Cuando se aplica display: inline-flex a un elemento, este se comportará como un elemento en línea, lo que significa que ocupará solo el ancho necesario para su contenido y no provocará un salto de línea */
+.green-link{
+  text-transform: uppercase;
+  border:0;
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 4px;
+  
+  color:greenyellow;
+  font-weight: bolder;
+  text-decoration: none;
+}
+
+.green-link::before{
+  content:"";
+  display: block;
+  text-align: center;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  transform: scaleX(0);
+  -webkit-transform: scaleX(0);
+  -moz-transform: scaleX(0);
+  -ms-transform: scaleX(0);
+  -o-transform: scaleX(0);
+  transition: transform 0.3s ease;
+  -webkit-transition: transform 0.3s ease;
+  -moz-transition: transform 0.3s ease;
+  -ms-transition: transform 0.3s ease;
+  -o-transition: transform 0.3s ease;
+
+  background-color: greenyellow;
+}
+
+.green-link:hover::before{
+  transform: scaleX(1);
+  -webkit-transform: scaleX(1);
+  -moz-transform: scaleX(1);
+  -ms-transform: scaleX(1);
+  -o-transform: scaleX(1);
+}
+
+/*-----------------
+    VIDEOS
+-------------------*/
+
+.w-75 {
+  width:75%;
+  display: block;
+  margin: 0 auto;
+}
+
+h3 {
+  font-size:1.6em;
+  padding-top: 50px;
+  color:white
+}
+
+#videos {
+  text-align: center;
+  padding: 50px 0;
+  background-image: url(../images/bg-videos.png);
+  background-position: bottom center;
+  background-size:cover;
+  background-repeat: no-repeat;
+
+  color:white
+}
+
+#videos #slider #controls {
+  display: flex;
+  justify-content: center;
+}
+
+#videos #slider #controls #next,
+#videos #slider #controls #prev {
+ border:none;
+ height: 50px;
+ width: 50px;
+ background-color: rgb(58,58,58);
+ color:white;
+ cursor: pointer;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ transform: all 3s ease;
+ -webkit-transform: all 3s ease;
+ -moz-transform: all 3s ease;
+ -ms-transform: all 3s ease;
+ -o-transform: all 3s ease;
+}
+
+#videos #slider #controls .next:hover,
+#videos #slider #controls .prev:hover {
+  background-color: rgb(37,37,37);
+}
+
+#videos #slider #current {
+  position: relative;
+  width: 70%;
+  aspect-ratio: 1.8/1;
+  margin: 50px auto;
+  border: 1px solid #00c3ff;
+}
+
+#videos #slider #current iframe {
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#videos #slider #videos-container {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  overflow: auto;
+  scroll-behavior: smooth; /* Agrega scroll suave al desplazamiento */
+  white-space: nowrap; /* Evita que los videos se envuelvan a la siguiente línea */
+}
+
+#videos #slider #videos-container .item {
+  border: 1px solid #00c3ff;
+  cursor: pointer;
+  overflow: hidden;
+  min-width: 320px;
+  height: 180px;
+}
+
+#videos #slider #videos-container .item a {
+  position: relative;
+  min-width: 320px;
+  min-height: 180px;
+
+}
+#videos #slider #videos-container .item img {
+  object-fit: contain;
+  min-width: 320px;
+  height: 180px;
+  transition:  opacity  0.3s ease;
+  -webkit-transition:  opacity  0.3s ease;
+  -moz-transition:  opacity  0.3s ease;
+  -ms-transition:  opacity  0.3s ease;
+  -o-transition:  opacity  0.3s ease;
+}
+#videos #slider #videos-container .item:hover img {
+  opacity: 0.6;
+}
+
+#videos #slider #videos-container .item a::before {
+  font-family: "Material Symbols Outlined";
+  font-size: 20px;
+  content: "play_arrow";
+  position: absolute;
+  top:-95px;
+  left:135px;
+  background-color: black;
+  color: #fff;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+}
+
+/*-----------------
+    MULTIPLAYER
+-------------------*/
+
+#multiplayer {
+  height: 100vh;
+  background-image: url("../images/bg-multiplayer.jpeg");
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  background-position:center;
+}
+
+.info {
+  line-height: 1.2;
+  padding: 30px;
+  width: 600px;
+  margin-right: 50px;
+  transition: background-color 0.4s ease;
+  -webkit-transition:background-color 0.4s ease;
+  -moz-transition:background-color 0.4s ease;
+  -ms-transition:background-color 0.4s ease;
+  -o-transition:background-color 0.4s ease;
+}
+
+.info p {
+  font-size: 20px;
+  padding: 0;
+}
+
+
+/*-----------------
+    GET THE GAME
+-------------------*/
+
+#get-the-game {
+  text-align: center;
+  color: white;
+  padding: 50px 0;
+
+}
+#get-the-game h3 {
+  font-size: 1.8rem;
+  padding: 0;
+  margin: 0
+}
+#get-the-game .item-store {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  width: 90%;
+  margin: 0 auto;
+}
+
+#get-the-game .item-store .left {
+  width: 100%;
+  padding: 20px;
+
+}
+
+#get-the-game .item-store .left img {
+  width:400px
+}
+
+#get-the-game .item-store .right {
+  text-align: left;
+  flex-basis: 60%;
+  padding:0 0 0 20px;
+}
+
+
+/*-----------------
+    FOOTER
+-------------------*/
+
+footer {
+  background-image: url("../images/master-chief-darkmode.jpg") ;
+  height: 800px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+}
+
+@media screen and (max-width:1191px) {
+  nav .link-hide {
+    display: none;
+  }
+  nav .more {
+    display: block;
+  }
+  header {
+    background-image: url("../images/halo-infinite-cover-darkmode.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
+  }
+  /*Correcto, al establecer position: initial en el selector #banner, estás restableciendo el valor de posición a su valor inicial, que suele ser static para la mayoría de los elementos.*/
+  /* Al establecer position: initial, el elemento #banner volverá a su posición predeterminada, que depende del tipo de elemento. Por ejemplo, si el elemento es un <a>,<div>,<img>,etc..., la posición predeterminada será static. */
+  #banner {
+    position: static;
+    z-index: 100;
+    width: 100%
+  }
+  #videos #slider #current {
+    width: 80%;
+  }
+
+  #multiplayer {
+    background-position: left top;
+  }
+
+  .info {
+    margin: 0 auto;
+    background-color: rgba(0 , 0 , 0, 0.8);
+    color: #fff
+  }
+  #get-the-game .item-store .left {
+    width: fit-content;
+  }
+  
+   #get-the-game .item-store .left img {
+    width:300px
+   }
+   footer {
+    height: 600px;
+  }
+}
+
+@media screen and (max-width:700px) {
+
+  h2{
+    font-size: 2rem;
+  }
+
+  nav {
+    padding:0;
+  }
+  nav ul {
+    display: none;
+  }
+  
+  nav .mobile {
+    display: block
+  }
+
+  header {
+    background-image: url("../images/halo-infinite-cover-darkmode.jpg");
+    background-size: cover;
+    background-position: center 30px;
+    height: 50vh;
+  }
+
+  #banner {
+    position: initial !important;
+    width: 100%
+  }
+
+  #videos #slider #current {
+    width: 80%;
+  }
+
+  #videos #slider #videos-container {
+    display: none;
+  }
+
+  #multiplayer {
+    background-position: 25%  center;
+  }
+
+  .info {
+    width: 90%;
+  }
+
+  #get-the-game .item-store {
+    flex-direction: column;
+    align-items: center;
+   }
+
+   #get-the-game .item-store .right {
+    text-align: center
+  }
+
+  #get-the-game .item-store .left img {
+    width: 200px
+  }
+
+  footer {
+    height: 400px;
+  }
+}
